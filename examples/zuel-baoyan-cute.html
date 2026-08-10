@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中南财保研政策解读</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: linear-gradient(180deg, #E8EAF6 0%, #F3E5F5 40%, #E3F2FD 70%, #F3E5F5 100%);
+            color: #333;
+            line-height: 1.85;
+        }
+
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 14px 40px;
+        }
+
+        /* ===== 深色顶部Banner ===== */
+        .hero-banner {
+            background: linear-gradient(135deg, #1A237E 0%, #283593 40%, #3949AB 100%);
+            border-radius: 0 0 30px 30px;
+            padding: 36px 24px 32px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin: 0 -14px 20px;
+            box-shadow: 0 8px 32px rgba(26, 35, 126, 0.25);
+        }
+
+        .hero-banner::before {
+            content: "✦ ✧ ✦";
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: rgba(255,255,255,0.3);
+            letter-spacing: 8px;
+        }
+
+        .hero-banner::after {
+            content: "";
+            position: absolute;
+            bottom: -40px;
+            left: -20px;
+            right: -20px;
+            height: 80px;
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 0%, transparent 70%);
+        }
+
+        .hero-emoji {
+            font-size: 42px;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .hero-title {
+            font-family: "Noto Serif SC", serif;
+            font-size: 26px;
+            font-weight: 700;
+            color: white;
+            line-height: 1.4;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            color: rgba(255,255,255,0.75);
+            margin-top: 10px;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-tag {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            border-radius: 16px;
+            padding: 4px 14px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.9);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        /* ===== 引言便签 ===== */
+        .intro-sticky {
+            background: linear-gradient(135deg, #FFF9C4 0%, #FFF59D 100%);
+            border-radius: 8px 24px 24px 8px;
+            padding: 24px 26px 20px;
+            margin: 24px 0 28px;
+            position: relative;
+            box-shadow: 3px 4px 15px rgba(0,0,0,0.08), inset 0 0 0 1px rgba(0,0,0,0.04);
+            transform: rotate(-0.5deg);
+        }
+
+        .intro-sticky::before {
+            content: "📌";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-5deg);
+            font-size: 22px;
+            filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+        }
+
+        .intro-sticky::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: repeating-linear-gradient(
+                90deg,
+                transparent,
+                transparent 8px,
+                rgba(0,0,0,0.03) 8px,
+                rgba(0,0,0,0.03) 9px
+            );
+            border-radius: 8px 24px 0 0;
+        }
+
+        .intro-text {
+            font-size: 15px;
+            color: #5D4037;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .intro-highlight {
+            background: linear-gradient(transparent 55%, rgba(255,183,77,0.35) 55%);
+            font-weight: 700;
+            color: #E65100;
+        }
+
+        .intro-note {
+            font-size: 11.5px;
+            color: #8D6E63;
+            text-align: center;
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(141, 110, 99, 0.25);
+            line-height: 1.8;
+        }
+
+        /* ===== 紫色标题条 ===== */
+        .section-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #B39DDB 0%, #9575CD 100%);
+            border-radius: 24px;
+            padding: 10px 24px;
+            margin: 28px 0 20px;
+            box-shadow: 0 4px 16px rgba(149, 117, 205, 0.25);
+        }
+
+        .section-pill .pill-emoji {
+            font-size: 20px;
+        }
+
+        .section-pill .pill-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        /* ===== 内容卡片 ===== */
+        .content-card {
+            background: white;
+            border-radius: 20px;
+            padding: 22px 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+        }
+
+        .content-text {
+            font-size: 14.5px;
+            color: #444;
+            line-height: 2;
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* ===== 子标题 ===== */
+        .subsection-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: linear-gradient(135deg, #E1BEE7, #CE93D8);
+            border-radius: 16px;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 700;
+            color: #4A148C;
+            margin: 18px 0 10px;
+        }
+
+        /* ===== 列表 ===== */
+        .emoji-list {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        .emoji-list li {
+            position: relative;
+            padding: 8px 0 8px 32px;
+            font-size: 14px;
+            line-height: 1.9;
+            color: #444;
+            border-bottom: 1px dashed rgba(0,0,0,0.06);
+        }
+
+        .emoji-list li:last-child {
+            border-bottom: none;
+        }
+
+        .emoji-list li .list-emoji {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            font-size: 16px;
+        }
+
+        /* ===== 提示便签 ===== */
+        .tip-sticky {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-radius: 12px 20px 20px 12px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            position: relative;
+            box-shadow: 2px 3px 12px rgba(0,0,0,0.05);
+            border-left: 4px solid #66BB6A;
+        }
+
+        .tip-sticky .tip-emoji {
+            font-size: 20px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .tip-sticky .tip-text {
+            font-size: 14px;
+            color: #2E7D32;
+            line-height: 1.9;
+        }
+
+        .tip-sticky .tip-text strong {
+            color: #1B5E20;
+        }
+
+        /* ===== 公式便签 ===== */
+        .formula-sticky {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-radius: 16px;
+            padding: 22px 24px;
+            margin: 16px 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            border: 2px dashed #FFB74D;
+        }
+
+        .formula-sticky::before {
+            content: "📝";
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            background: white;
+            padding: 0 8px;
+        }
+
+        .formula-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 15px;
+            font-weight: 700;
+            color: #E65100;
+            line-height: 2;
+            letter-spacing: 1px;
+            margin-top: 4px;
+        }
+
+        .formula-example {
+            font-size: 13px;
+            color: #8D6E63;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed #FFCC80;
+            line-height: 1.8;
+        }
+
+        /* ===== 坑点卡片 ===== */
+        .warning-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 14px 0;
+        }
+
+        .warning-card {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            background: linear-gradient(135deg, #FFEBEE 0%, #FFCDD2 100%);
+            border-radius: 16px;
+            padding: 14px 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+            border: 1px solid rgba(239, 83, 80, 0.15);
+        }
+
+        .warning-emoji {
+            font-size: 28px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .warning-body {
+            flex: 1;
+        }
+
+        .warning-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #C62828;
+            margin-bottom: 4px;
+        }
+
+        .warning-desc {
+            font-size: 13px;
+            color: #6D4C41;
+            line-height: 1.8;
+        }
+
+        /* ===== STOP 标志 ===== */
+        .stop-sign {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #FF5252, #D32F2F);
+            border-radius: 50%;
+            width: 56px;
+            height: 56px;
+            flex-shrink: 0;
+            box-shadow: 0 3px 12px rgba(211, 47, 47, 0.3);
+        }
+
+        .stop-sign span {
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        /* ===== 年级卡片 ===== */
+        .grade-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin: 14px 0;
+        }
+
+        .grade-card {
+            display: flex;
+            align-items: stretch;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .grade-left {
+            flex-shrink: 0;
+            width: 64px;
+            background: linear-gradient(180deg, #7E57C2, #5E35B1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 12px 0;
+        }
+
+        .grade-left .grade-emoji {
+            font-size: 22px;
+        }
+
+        .grade-left .grade-label {
+            font-size: 11px;
+            opacity: 0.85;
+            margin-top: 2px;
+        }
+
+        .grade-body {
+            flex: 1;
+            padding: 14px 16px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+            color: #444;
+            line-height: 1.9;
+        }
+
+        /* ===== 结语便签 ===== */
+        .closing-sticky {
+            background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+            border-radius: 20px;
+            padding: 28px 24px;
+            margin: 24px 0 16px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+        }
+
+        .closing-sticky::before {
+            content: "💡";
+            font-size: 32px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .closing-text {
+            font-family: "Noto Serif SC", serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #4A148C;
+            line-height: 2;
+        }
+
+        .reminder-text {
+            text-align: center;
+            font-size: 12.5px;
+            color: #7E57C2;
+            line-height: 1.9;
+            margin: 10px 0 6px;
+        }
+
+        /* ===== 分割线 ===== */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 24px 0;
+            gap: 8px;
+        }
+
+        .divider-emoji {
+            font-size: 18px;
+        }
+
+        .divider-dot {
+            width: 5px;
+            height: 5px;
+            background: #B39DDB;
+            border-radius: 50%;
+        }
+
+        /* ===== END ===== */
+        .end-section {
+            text-align: center;
+            padding: 16px;
+        }
+
+        .end-badge {
+            display: inline-block;
+            background: white;
+            border: 2px solid #B39DDB;
+            border-radius: 24px;
+            padding: 8px 32px;
+            font-size: 13px;
+            font-weight: 700;
+            color: #7E57C2;
+            letter-spacing: 6px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+
+        /* ===== 底部 ===== */
+        .footer-section {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .footer-text {
+            font-size: 11.5px;
+            color: #9E9E9E;
+            line-height: 2;
+        }
+
+        /* ===== 链接 ===== */
+        a {
+            color: #7E57C2;
+            text-decoration: none;
+            border-bottom: 1px dashed rgba(126, 87, 194, 0.4);
+            transition: all 0.2s;
+        }
+
+        a:hover {
+            border-color: #7E57C2;
+            color: #5E35B1;
+        }
+
+        /* ===== 手绘装饰线 ===== */
+        .doodle-line {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+            gap: 6px;
+        }
+
+        .doodle-line span {
+            font-size: 14px;
+            color: #B39DDB;
+            opacity: 0.6;
+        }
+
+        /* ===== 响应式 ===== */
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 22px;
+            }
+            .section-pill .pill-text {
+                font-size: 15px;
+            }
+            .content-card {
+                padding: 18px 16px;
+                border-radius: 16px;
+            }
+            .grade-card {
+                flex-direction: column;
+            }
+            .grade-left {
+                width: 100%;
+                flex-direction: row;
+                gap: 6px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 深色顶部Banner -->
+        <div class="hero-banner">
+            <span class="hero-emoji">🎓</span>
+            <h1 class="hero-title">中南财保研政策解读</h1>
+            <p class="hero-subtitle">成绩 · 英语 · 竞赛加分怎么算</p>
+            <div class="hero-tags">
+                <span class="hero-tag">📚 保研指南</span>
+                <span class="hero-tag">🏫 中南财大</span>
+                <span class="hero-tag">✨ 政策解读</span>
+            </div>
+        </div>
+
+        <!-- 引言便签 -->
+        <div class="intro-sticky">
+            <p class="intro-text">
+                专业前多少能保研？六级是不是硬门槛？竞赛加分到底有多大用？<br><br>
+                先说结论：<span class="intro-highlight">中南财保研的核心仍然是前三年的学业成绩。加分确实能拉开差距，但不能替代基本资格。</span>
+            </p>
+            <p class="intro-note">
+                📋 本文依据学校现行推免管理办法及已公开的学院细则整理<br>
+                🗓️ 截至2026年8月9日，暂未检索到2027届校级年度推免通知<br>
+                ⚠️ 后续如有调整，请以学校和所在学院最新文件为准
+            </p>
+        </div>
+
+        <div class="doodle-line">
+            <span>~</span><span>~</span><span>~</span><span>✿</span><span>~</span><span>~</span><span>~</span>
+        </div>
+
+        <!-- 第一部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">🔑</span>
+            <span class="pill-text">先分清：推免资格 ≠ 已经录取</span>
+        </div>
+        <div class="content-card">
+            <p class="content-text">
+                保研要过两关。第一关是在中南财校内竞争，拿到本校推免资格；第二关是向目标院校申请，参加材料审核、复试或综合考核。
+            </p>
+            <p class="content-text">
+                拿到校内资格，只代表获得了免初试的"入场券"。之后仍要通过教育部"推免服务系统"完成报名和录取，并接受招生单位考核。<a href="https://cjs.zuel.edu.cn/2025/0928/c17544a406755/page.htm" target="_blank">刑事司法学院2026年推免招生工作办法</a>
+            </p>
+            <div class="tip-sticky">
+                <span class="tip-emoji">💡</span>
+                <span class="tip-text"><strong>关键提醒：</strong>大三阶段要同时做两件事：守住校内排名，准备夏令营和预推免申请。</span>
+            </div>
+        </div>
+
+        <!-- 第二部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">📊</span>
+            <span class="pill-text">校内推免主要看什么？</span>
+        </div>
+        <div class="content-card">
+            <div class="subsection-tag">📈 1—6学期加权平均成绩</div>
+            <p class="content-text">
+                推免通常核算大一到大三，也就是前六个学期的课程成绩。
+            </p>
+            <p class="content-text">
+                但"专业前多少可以申请"不是全校统一的。以已公开文件为例，会计学院2025届要求加权平均成绩进入本专业前40%，哲学院2025年修订细则要求进入前50%。这只是资格线，最终还要结合学院名额和综合成绩排序。<a href="https://kjxy.zuel.edu.cn/_t718/2024/0819/c15517a370737/pagem.htm" target="_blank">会计学院通知</a>｜<a href="https://zxy.zuel.edu.cn/2025/0401/c4567a387860/page.htm" target="_blank">哲学院细则</a>
+            </p>
+            <div class="tip-sticky">
+                <span class="tip-emoji">⚠️</span>
+                <span class="tip-text"><strong>不要只问"中南财前多少能保研"</strong>，要查的是自己学院、自己专业的现行细则和往年实际推荐名单。</span>
+            </div>
+
+            <div class="subsection-tag">📚 主干课、数学课和外语</div>
+            <p class="content-text">
+                总排名够了，单项不合格也可能报不了。多份学院细则要求三门专业主干课每门不低于80分；部分经管类专业还会检查数学类基础课程。非英语专业常见的语言资格线包括：
+            </p>
+            <ul class="emoji-list">
+                <li><span class="list-emoji">🎯</span>六级425分及以上；</li>
+                <li><span class="list-emoji">🎯</span>或四级560分及以上；</li>
+                <li><span class="list-emoji">🎯</span>或雅思6.5分及以上；</li>
+                <li><span class="list-emoji">🎯</span>或托福90分及以上。</li>
+            </ul>
+            <p class="content-text">
+                部分现行细则还要求外语课程加权平均成绩和口语成绩达到相应标准。外语专业、艺术专业及高考小语种学生另有认定办法。
+            </p>
+            <div class="tip-sticky">
+                <span class="tip-emoji">📝</span>
+                <span class="tip-text"><strong>重修注意事项：</strong>部分学院按初次考试成绩计算，个别学院明确必修课初次考试不及格会影响申请资格，不能默认"重修刷高后就没事"。</span>
+            </div>
+
+            <div class="subsection-tag">🏃 体测和思想品德</div>
+            <p class="content-text">
+                体测不是走过场。现行细则中，前三年体测平均成绩通常需要达到60分；思想品德考核不合格，或存在考试作弊、学术不端等记录，也会影响推免资格。<a href="https://zxy.zuel.edu.cn/2025/0401/c4567a387860/page.htm" target="_blank">哲学院细则</a>
+            </p>
+        </div>
+
+        <!-- 第三部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">🧮</span>
+            <span class="pill-text">综合成绩怎么算？</span>
+        </div>
+        <div class="content-card">
+            <p class="content-text">
+                已公布的多份学院细则采用以下公式：
+            </p>
+            <div class="formula-sticky">
+                <div class="formula-text">
+                    综合评定成绩 ＝ 1—6学期加权平均成绩 × 85%<br>
+                    ＋ 各类奖励总分 × 15%
+                </div>
+                <div class="formula-example">
+                    例如：加权平均成绩90分，学业部分折算后是76.5分；<br>
+                    奖励分10分，折算后计入综合成绩的是1.5分，不是直接加10分。
+                </div>
+            </div>
+            <div class="tip-sticky">
+                <span class="tip-emoji">💡</span>
+                <span class="tip-text"><strong>核心结论：</strong>成绩仍然是基本盘。为了追一个不确定的小项目，反而拖低主干课和期末成绩，通常得不偿失。</span>
+            </div>
+        </div>
+
+        <!-- 第四部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">🏆</span>
+            <span class="pill-text">哪些项目可能加分？</span>
+        </div>
+        <div class="content-card">
+            <p class="content-text">
+                学校层面明确的方向包括应征入伍、A类学科竞赛、英语口语、国际组织实习和体测等；科研成果、志愿服务及其他竞赛，则要看学院细则。
+            </p>
+            <p class="content-text">
+                中国国际大学生创新大赛、"挑战杯"系列竞赛和全国大学生创新创业年会，会根据奖项等级及成员排序计分。相关竞赛奖励累计最高30分，同一项目参加同一赛事获得不同等级奖励，只取最高项，不重复计算。<a href="https://zxy.zuel.edu.cn/_upload/article/files/92/5e/39665a5a4bd5ba09557d5f0c5840/2503605c-05c6-4a41-b74e-61e47eac70b8.pdf" target="_blank">竞赛加分细则</a>
+            </p>
+            <p class="content-text">
+                非英语专业学生的四六级口语、雅思口语或托福口语，按成绩可获得1—5分，但不同考试不累计。<a href="https://zxy.zuel.edu.cn/_upload/article/files/92/5e/39665a5a4bd5ba09557d5f0c5840/a998ff7d-1cfa-497f-9f5e-a1e827aa4a4a.pdf" target="_blank">口语加分细则</a>
+            </p>
+            <p class="content-text">
+                前三年体测平均成绩达到80分以上，也可能获得1—3分奖励。<a href="https://zxy.zuel.edu.cn/_upload/article/files/92/5e/39665a5a4bd5ba09557d5f0c5840/a4511d82-9997-4b2d-96e4-98a76e790115.pdf" target="_blank">体测加分细则</a>
+            </p>
+            <div class="tip-sticky">
+                <span class="tip-emoji">📄</span>
+                <span class="tip-text"><strong>论文和特殊学术专长</strong>也不是"交材料就加分"。现行细则强调成果质量、专业相关性和本人实际贡献，部分成果还要经过教授推荐、专家审核和公开答辩。挂名或材料不实，可能直接影响推免资格。</span>
+            </div>
+        </div>
+
+        <!-- 第五部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">🚫</span>
+            <span class="pill-text">最容易踩的几个坑</span>
+        </div>
+        <div class="content-card">
+            <div class="warning-grid">
+                <div class="warning-card">
+                    <div class="stop-sign"><span>STOP</span></div>
+                    <div class="warning-body">
+                        <div class="warning-title">拿其他学院的排名线套自己</div>
+                        <div class="warning-desc">各学院门槛、主干课和加分目录可能不同，一定要看自己学院的现行细则。</div>
+                    </div>
+                </div>
+
+                <div class="warning-card">
+                    <div class="warning-emoji">😵</div>
+                    <div class="warning-body">
+                        <div class="warning-title">只看总排名，不查单项条件</div>
+                        <div class="warning-desc">外语、主干课、体测和初次考试成绩都可能卡资格，缺一不可。</div>
+                    </div>
+                </div>
+
+                <div class="warning-card">
+                    <div class="warning-emoji">🤔</div>
+                    <div class="warning-body">
+                        <div class="warning-title">误以为原始奖励分就是综合成绩加分</div>
+                        <div class="warning-desc">奖励分还要乘15%才能计入综合成绩，不是直接全加上去。</div>
+                    </div>
+                </div>
+
+                <div class="warning-card">
+                    <div class="warning-emoji">🏃</div>
+                    <div class="warning-body">
+                        <div class="warning-title">盲目参加项目</div>
+                        <div class="warning-desc">比赛级别、获奖时间、成员排序不符合细则，最后可能无法认定。</div>
+                    </div>
+                </div>
+
+                <div class="warning-card">
+                    <div class="warning-emoji">⏰</div>
+                    <div class="warning-body">
+                        <div class="warning-title">等校内名单出来才准备外校申请</div>
+                        <div class="warning-desc">夏令营和预推免材料应该提前准备，别等名额确定后再动手。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 第六部分 -->
+        <div class="section-pill">
+            <span class="pill-emoji">🗓️</span>
+            <span class="pill-text">不同年级怎么准备？</span>
+        </div>
+        <div class="content-card">
+            <div class="grade-cards">
+                <div class="grade-card">
+                    <div class="grade-left">
+                        <span class="grade-emoji">🌱</span>
+                        <span class="grade-label">大一</span>
+                    </div>
+                    <div class="grade-body">
+                        先熟悉培养方案和成绩算法，守住排名，别挂科；英语和体测尽早过线。
+                    </div>
+                </div>
+
+                <div class="grade-card">
+                    <div class="grade-left">
+                        <span class="grade-emoji">🌿</span>
+                        <span class="grade-label">大二</span>
+                    </div>
+                    <div class="grade-body">
+                        在不影响成绩的前提下，选择与专业相关、规则明确认可的竞赛或科研项目。
+                    </div>
+                </div>
+
+                <div class="grade-card">
+                    <div class="grade-left">
+                        <span class="grade-emoji">🌳</span>
+                        <span class="grade-label">大三</span>
+                    </div>
+                    <div class="grade-body">
+                        把排名、主干课、数学课、外语、体测和加分证明列成自查表；暑期同步准备夏令营、预推免和目标院校材料。
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结语 -->
+        <div class="closing-sticky">
+            <p class="closing-text">
+                先守住资格线和专业排名，<br>
+                再做规则明确、质量过硬的加分项目。
+            </p>
+        </div>
+
+        <p class="reminder-text">
+            🔔 等2027届年度通知和各学院工作安排发布后<br>
+            尤其要重新核对名额、材料截止时间和学院细则是否变化
+        </p>
+
+        <!-- 分割线 -->
+        <div class="divider">
+            <div class="divider-dot"></div>
+            <span class="divider-emoji">🌟</span>
+            <div class="divider-dot"></div>
+            <span class="divider-emoji">✨</span>
+            <div class="divider-dot"></div>
+            <span class="divider-emoji">🌟</span>
+            <div class="divider-dot"></div>
+        </div>
+
+        <!-- END -->
+        <div class="end-section">
+            <div class="end-badge">E N D</div>
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer-section">
+            <div class="footer-text">
+                🎓 中南财经政法大学 · 保研政策解读<br>
+                📋 本文仅供信息参考，具体政策以学校及学院最新文件为准
+            </div>
+        </div>
+    </div>
+</body>
+</html>
