@@ -2,7 +2,7 @@
 
 > 将 Markdown 文章转化为微信公众号彩虹风排版 HTML。
 
-采用彩虹渐变头图、彩色圆角卡片、emoji 图标、暖色调（橙/黄/绿/蓝/粉）风格，适配移动端阅读。适用于 [WorkBuddy](https://www.codebuddy.cn/) 技能体系。
+采用彩虹渐变头图、彩色圆角卡片、emoji 图标、暖色调（橙/黄/绿/蓝/粉）风格，适配移动端阅读。适用于 Codex 技能体系。
 
 ## 效果预览
 
@@ -30,15 +30,15 @@
 
 ## 安装
 
-将本仓库克隆到 WorkBuddy 技能目录：
+将本仓库克隆到 Codex 技能目录：
 
 ```bash
-git clone https://github.com/bingzhenxigua1-ai/rainbow-wechat-format.git ~/.workbuddy/skills/rainbow-wechat-format
+git clone https://github.com/bingzhenxigua1-ai/rainbow-wechat-format.git ~/.codex/skills/rainbow-wechat-format
 ```
 
 ## 使用
 
-在 WorkBuddy 对话中触发以下任一表达即可自动调用：
+在 Codex 对话中触发以下任一表达即可自动调用：
 
 - 「用彩虹风排版」
 - 「用上次那个风格排版」

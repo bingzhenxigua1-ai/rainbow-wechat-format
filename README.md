@@ -1,8 +1,8 @@
-# WorkBuddy Skills
+# Codex Skills
 
-> 个人 WorkBuddy 技能合集，持续更新。
+> 个人 Codex 技能合集，持续更新。
 
-本仓库统一管理多个 [WorkBuddy](https://www.codebuddy.cn/) 技能（Skill），每个技能存放在 `skills/` 下的独立子目录中。
+本仓库统一管理多个 [Codex](https://www.codebuddy.cn/) 技能（Skill），每个技能存放在 `skills/` 下的独立子目录中。
 
 ## 技能列表
 
@@ -38,14 +38,14 @@
 # 克隆仓库
 git clone https://github.com/bingzhenxigua1-ai/rainbow-wechat-format.git /tmp/wb-skills
 
-# 将需要的技能复制到 WorkBuddy 技能目录
-cp -r /tmp/wb-skills/skills/rainbow-wechat-format ~/.workbuddy/skills/
+# 将需要的技能复制到 Codex 技能目录
+cp -r /tmp/wb-skills/skills/rainbow-wechat-format ~/.codex/skills/
 ```
 
 ## 安装全部技能
 
 ```bash
-cp -r /tmp/wb-skills/skills/* ~/.workbuddy/skills/
+cp -r /tmp/wb-skills/skills/* ~/.codex/skills/
 ```
 
 ## 添加新技能
