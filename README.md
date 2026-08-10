@@ -9,6 +9,7 @@
 | 技能 | 说明 | 目录 |
 |------|------|------|
 | rainbow-wechat-format | 将 Markdown 文章转化为微信公众号彩虹风排版 HTML | [`skills/rainbow-wechat-format`](skills/rainbow-wechat-format) |
+| hnust-wechat-cover | 湖南科技大学微信公众号封面生成器（5 种风格、3 种尺寸） | [`skills/hnust-wechat-cover`](skills/hnust-wechat-cover) |
 
 ## 目录结构
 
@@ -18,12 +19,17 @@
 ├── LICENSE                             # MIT
 ├── .gitignore
 └── skills/                             # 所有技能存放于此
-    └── rainbow-wechat-format/          # 单个技能目录
-        ├── SKILL.md                    # 技能定义（触发条件 + 工作流程）
-        ├── README.md                   # 技能详细文档
-        ├── assets/                     # 模板、图片等静态资源
-        ├── references/                 # 参考文档
-        └── scripts/                    # 辅助脚本
+    ├── rainbow-wechat-format/          # 彩虹风公众号排版
+    │   ├── SKILL.md                    # 技能定义（触发条件 + 工作流程）
+    │   ├── README.md                   # 技能详细文档
+    │   ├── assets/                     # 模板、图片等静态资源
+    │   ├── references/                 # 参考文档
+    │   └── scripts/                    # 辅助脚本
+    └── hnust-wechat-cover/             # 湖南科技大学公众号封面
+        ├── SKILL.md
+        ├── README.md
+        ├── scripts/                    # 封面拼接脚本
+        └── references/                 # 风格指南
 ```
 
 ## 安装单个技能
