@@ -6,10 +6,10 @@
 
 ## 技能列表
 
-| 技能 | 说明 | 目录 |
-|------|------|------|
-| rainbow-wechat-format | 将 Markdown 文章转化为微信公众号彩虹风排版 HTML | [`skills/rainbow-wechat-format`](skills/rainbow-wechat-format) |
-| hnust-wechat-cover | 湖南科技大学微信公众号封面生成器（5 种风格、3 种尺寸） | [`skills/hnust-wechat-cover`](skills/hnust-wechat-cover) |
+| 技能 | 说明 | 风格 | 目录 |
+|------|------|------|------|
+| rainbow-wechat-format | 将 Markdown 文章转化为微信公众号排版 HTML | **正文排版风格**：彩虹版 / 奶油杏仁学术风 / 小清新绿版 / 可爱便签版 / 小熊清新黄蓝风 | [`skills/rainbow-wechat-format`](skills/rainbow-wechat-format) |
+| hnust-wechat-cover | 微信公众号封面生成器（3 种尺寸） | **封面风格**：活泼拼贴 / 手绘插画 / 实景新闻 / 清新扁平 / 城市旅行 | [`skills/hnust-wechat-cover`](skills/hnust-wechat-cover) |
 
 ## 目录结构
 
