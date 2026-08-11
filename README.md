@@ -25,7 +25,7 @@
     │   ├── assets/                     # 模板、图片等静态资源
     │   ├── references/                 # 参考文档
     │   └── scripts/                    # 辅助脚本
-    └── hnust-wechat-cover/             # 湖南科技大学公众号封面
+    └── hnust-wechat-cover/             # 公众号封面生成器
         ├── SKILL.md
         ├── README.md
         ├── scripts/                    # 封面拼接脚本
